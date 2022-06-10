@@ -17,12 +17,17 @@ fun CalculatorButton(
     modifier: Modifier,
     onClick: () -> Unit
 ) {
-    Box(contentAlignment = Alignment.Center,
+    Box(
+        contentAlignment = Alignment.Center,
         modifier = Modifier
             .clip(CircleShape)
             .clickable { onClick() }
             .then(modifier)
     ) {
-        Text(text = symbol, fontSize = 36.sp, color = Color.White)
+        Text(
+            text = symbol,
+            fontSize = 36.sp,
+            color = Color.White,
+        )
     }
 }
